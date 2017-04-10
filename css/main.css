@@ -1,0 +1,20 @@
+.pocemon-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.pocemon-item {
+    width: 200px;
+    height: 200px;
+    background-color: #eee;
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kisdogok {
+    width: 100px;
+    height: 100px;
+}
