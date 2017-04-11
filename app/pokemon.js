@@ -10,13 +10,31 @@ function reqListener () {
         $(item).attr("id", value.name);
         $(item).addClass("pocemon-item");
         var img = document.createElement("img");
+        var url = value.url;
         var id = value.url.replace("http://pokeapi.co/api/v2/pokemon/", "").replace("/", "");
-        $(img).attr("src", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + id + ".png");
+        $(img).attr("src", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other-sprites/official-artwork/" + id + ".png");
         $(img).addClass("kisdogok");
         var title = document.createElement("span");
         title.textContent = value.name;
         item.append(img, title);
         container.append(item);
+
+        document.getElementById(value.name).addEventListener("click", function(event) {
+            var one = $("#one-pocemon");
+            one.empty();
+            var loader = document.createElement("img");
+            $(loader).attr("src", "images/giphy.gif");
+            one.append(loader);
+            fetch(url).then(function(response) {
+                return response.json().then(function(data){
+                    one.empty();
+                    var weight = document.createElement("span");
+                    weight.textContent = "Weight: " + data.weight;
+                    item.append(img, weight);
+                    one.append(item);
+                });
+            });
+        });
     });
 };
 
