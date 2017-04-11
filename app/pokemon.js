@@ -11,7 +11,7 @@ function reqListener () {
         $(item).addClass("pocemon-item");
         var img = document.createElement("img");
         var url = value.url;
-        var id = value.url.replace("http://pokeapi.co/api/v2/pokemon/", "").replace("/", "");
+        var id = value.url.replace("https://pokeapi.co/api/v2/pokemon/", "").replace("/", "");
         $(img).attr("src", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other-sprites/official-artwork/" + id + ".png");
         $(img).addClass("kisdogok");
         var title = document.createElement("span");
@@ -40,7 +40,7 @@ function reqListener () {
 
 var oReq = new XMLHttpRequest();
 oReq.addEventListener("load", reqListener);
-oReq.open("GET", "http://pokeapi.co/api/v2/pokemon/?limit=200");
+oReq.open("GET", "https://pokeapi.co/api/v2/pokemon/?limit=200");
 oReq.send();
 
 $( document ).ready(function() {
