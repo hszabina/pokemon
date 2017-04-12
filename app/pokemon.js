@@ -52,13 +52,25 @@ function addPocemonDetails(container, value) {
     title.textContent = value.name;
     var weight = document.createElement("div");
     weight.textContent = "Weight: " + value.weight;
+    
+    var height = document.createElement("div");
+    height.textContent = "Height: " + value.height;
 
-    item.append(img, title, weight);
+    if (value.types.length == 1) {
+        $(item).addClass(value.types[0].type.name + "-left");
+        $(item).addClass(value.types[0].type.name + "-right");
+    } else if (value.types.length == 2) {
+        $(item).addClass(value.types[0].type.name + "-left");
+        $(item).addClass(value.types[1].type.name + "-right");
+    }
+
+    item.append(img, title, weight, height);
     container.append(item);
 }
 
 $( document ).ready(function() {
-    getList(reqListener);
+    var actual = 0;
+    getList(reqListener, actual, actual + 12);
 
     document.getElementById("search").addEventListener("input", function(event) {
         var value = this.value;
@@ -69,5 +81,18 @@ $( document ).ready(function() {
                $(item).addClass("hidden");
             }
         });
+    });
+
+    document.getElementsByClassName("next")[0].addEventListener("click", function(event) {
+        var container = $(".pocemon-container");
+        container.empty();
+        actual += 12;
+        getList(reqListener, actual, actual + 12);
+    });
+    document.getElementsByClassName("previous")[0].addEventListener("click", function(event) {
+        var container = $(".pocemon-container");
+        container.empty();
+        actual -= 12;
+        getList(reqListener, actual, actual + 12);
     });
 });

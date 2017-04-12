@@ -17,7 +17,7 @@ function getList(callback, from, to) {
                 data[element.name] = one;
             });
 
-            var promise;
+            /*var promise;
             promises = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18].map(
                 i => fetch('https://pokeapi.co/api/v2/type/'+i).then(r => r.json())
             );
@@ -29,9 +29,9 @@ function getList(callback, from, to) {
                         data[poci.pokemon.name] && data[poci.pokemon.name].type.push(name);
                     });
                 });
-            }).then(function(){
+            }).then(function(){*/
                 callback(data);
-            });
+            /*});*/
             
        });
     })

@@ -3,6 +3,28 @@ body {
     background-image: url("../images/anus.jpg");
     background-repeat: repeat;
 }
+.next {
+    background-image: url(../images/right.png);
+    position: fixed;
+    top: 150px;
+    height: 50px;
+    width: 80px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    z-index: 100;
+}
+.previous {
+    background-image: url(../images/left.png);
+    position: fixed;
+    top: 150px;
+    height: 50px;
+    width: 80px;
+    left: 0px;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    z-index: 100;
+}
 .pocemon-container {
     display: flex;
     flex-flow: row wrap;
@@ -19,6 +41,10 @@ body {
     align-items: center;
 }
 
+#one-pocemon > div{
+    height: 100%;
+}
+
 .kisdogok {
     width: 100px;
     height: 100px;
@@ -33,7 +59,7 @@ span {
 }
 
 .pocemon-container:empty, #one-pocemon:empty {
-    background-image: url("images/giphy.gif");
+    background-image: url("../images/giphy.gif");
 }
 
 #one-pocemon {
