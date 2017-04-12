@@ -30,6 +30,7 @@ function addPocemonItem(container, value) {
     $(img).addClass("kisdogok");
     var title = document.createElement("span");
     title.textContent = value.name;
+    $(title).addClass("villogo");
     item.append(img, title);
     container.append(item);
     return item;
@@ -37,14 +38,12 @@ function addPocemonItem(container, value) {
 
 function addPocemonDetails(container, value) {
     var item = document.createElement("div");
-    $(item).attr("id", value.name);
-    $(item).addClass("pocemon-item");
     var img = document.createElement("img");
     $(img).attr("src", value.src);
     $(img).addClass("kisdogok");
-    var title = document.createElement("span");
+    var title = document.createElement("div");
     title.textContent = value.name;
-    var weight = document.createElement("span");
+    var weight = document.createElement("div");
     weight.textContent = "Weight: " + value.weight;
 
     item.append(img, title, weight);

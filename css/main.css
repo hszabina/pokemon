@@ -1,3 +1,8 @@
+body {
+    color: deeppink;
+    background-image: url("../images/anus.jpg");
+    background-repeat: repeat;
+}
 .pocemon-container {
     display: flex;
     flex-flow: row wrap;
@@ -6,7 +11,7 @@
 .pocemon-item {
     width: 200px;
     height: 200px;
-    background-color: #eee;
+    background-color: greenyellow;
     margin: 20px;
     display: flex;
     justify-content: space-around;
@@ -25,4 +30,91 @@
 
 span {
     text-transform:capitalize;
+}
+
+.pocemon-container:empty, #one-pocemon:empty {
+    background-image: url("images/giphy.gif");
+}
+
+#one-pocemon {
+    width: 200px;
+    height: 200px;
+    background-color: purple;
+    text-align: center;   
+    margin: 20px auto 20px auto;
+}
+
+
+.villogo, .pocemon-item:hover {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.pocemon-item:hover {
+    -webkit-animation-name: blinker2;
+    -moz-animation-name: blinker2;     
+    animation-name: blinker2;
+}
+
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-moz-keyframes blinker2 {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker2 {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker2 {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+
+.navbar {
+    background-color: yellow;
+}
+
+#search {
+    background-color: lightblue;
+    color: darkblue;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: greenyellow;
+    font-size: 30px;
+    font-family: fantasy;
 }
