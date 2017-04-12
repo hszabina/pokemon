@@ -25,6 +25,13 @@ function addPocemonItem(container, value) {
     var item = document.createElement("div");
     $(item).attr("id", value.name);
     $(item).addClass("pocemon-item");
+    if (value.type.length == 1) {
+        $(item).addClass(value.type[0] + "-left");
+        $(item).addClass(value.type[0] + "-right");
+    } else if (value.type.length == 2) {
+        $(item).addClass(value.type[0] + "-left");
+        $(item).addClass(value.type[1] + "-right");
+    }
     var img = document.createElement("img");
     $(img).attr("src", value.src);
     $(img).addClass("kisdogok");

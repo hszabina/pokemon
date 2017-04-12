@@ -118,3 +118,116 @@ span {
     font-size: 30px;
     font-family: fantasy;
 }
+
+
+.normal-right {
+  border-right: 20px solid  #a8a77a;
+}
+.fire-right {
+  border-right: 20px solid  #ee8130;
+}
+.water-right {
+  border-right: 20px solid  #6390f0;
+}
+.electric-right {
+  border-right: 20px solid  #f7d02c;
+}
+.grass-right {
+  border-right: 20px solid  #7ac74c;
+}
+.ice-right {
+  border-right: 20px solid  #96d9d6;
+}
+.fighting-right {
+  border-right: 20px solid  #c22e28;
+}
+.poison-right {
+  border-right: 20px solid  #a33ea1;
+}
+.ground-right {
+  border-right: 20px solid  #e2bf65;
+}
+.flying-right {
+  border-right: 20px solid  #a98ff3;
+}
+.psychic-right {
+  border-right: 20px solid  #f95587;
+}
+.bug-right {
+  border-right: 20px solid  #a6b91a;
+}
+.rock-right {
+  border-right: 20px solid  #b6a136;
+}
+.ghost-right {
+  border-right: 20px solid  #735797;
+}
+.dragon-right {
+  border-right: 20px solid  #6f35fc;
+}
+.dark-right {
+  border-right: 20px solid  #705746;
+}
+.steel-right {
+  border-right: 20px solid  #b7b7ce;
+}
+.fairy-right {
+  border-right: 20px solid  #d685ad;
+}
+
+
+
+.normal-left {
+  border-left: 20px solid  #a8a77a;
+}
+.fire-left {
+  border-left: 20px solid  #ee8130;
+}
+.water-left {
+  border-left: 20px solid  #6390f0;
+}
+.electric-left {
+  border-left: 20px solid  #f7d02c;
+}
+.grass-left {
+  border-left: 20px solid  #7ac74c;
+}
+.ice-left {
+  border-left: 20px solid  #96d9d6;
+}
+.fighting-left {
+  border-left: 20px solid  #c22e28;
+}
+.poison-left {
+  border-left: 20px solid  #a33ea1;
+}
+.ground-left {
+  border-left: 20px solid  #e2bf65;
+}
+.flying-left {
+  border-left: 20px solid  #a98ff3;
+}
+.psychic-left {
+  border-left: 20px solid  #f95587;
+}
+.bug-left {
+  border-left: 20px solid  #a6b91a;
+}
+.rock-left {
+  border-left: 20px solid  #b6a136;
+}
+.ghost-left {
+  border-left: 20px solid  #735797;
+}
+.dragon-left {
+  border-left: 20px solid  #6f35fc;
+}
+.dark-left {
+  border-left: 20px solid  #705746;
+}
+.steel-left {
+  border-left: 20px solid  #b7b7ce;
+}
+.fairy-left {
+  border-left: 20px solid  #d685ad;
+}
