@@ -22,3 +22,7 @@
 .hidden {
     display: none;
 }
+
+span {
+    text-transform:capitalize;
+}
