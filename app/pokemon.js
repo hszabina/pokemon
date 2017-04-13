@@ -12,7 +12,7 @@ function reqListener (data) {
             var loader = document.createElement("img");
             $(loader).attr("src", "images/giphy.gif");
             one.append(loader);
-            getDetails(value.id, function(data) {
+            api.getDetails(value.id, function(data) {
                 one.empty();
                 addPocemonDetails(one, data) ;
             });
@@ -69,8 +69,7 @@ function addPocemonDetails(container, value) {
 }
 
 $( document ).ready(function() {
-    var actual = 0;
-    getList(reqListener, actual, actual + 12);
+    api.getList(reqListener);
 
     document.getElementById("search").addEventListener("input", function(event) {
         var value = this.value;
@@ -86,13 +85,11 @@ $( document ).ready(function() {
     document.getElementsByClassName("next")[0].addEventListener("click", function(event) {
         var container = $("#pocemon-container");
         container.empty();
-        actual += 12;
-        getList(reqListener, actual, actual + 12);
+        api.getList(reqListener, 1);
     });
     document.getElementsByClassName("previous")[0].addEventListener("click", function(event) {
         var container = $("#pocemon-container");
         container.empty();
-        actual -= 12;
-        getList(reqListener, actual, actual + 12);
+        api.getList(reqListener, -1);
     });
 });
