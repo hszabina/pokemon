@@ -1,6 +1,6 @@
 
 function reqListener (data) {
-    var container = $(".pocemon-container");
+    var container = $("#pocemon-container");
     container.empty();
 
     $.each(data, function(index, value) {
@@ -84,13 +84,13 @@ $( document ).ready(function() {
     });
 
     document.getElementsByClassName("next")[0].addEventListener("click", function(event) {
-        var container = $(".pocemon-container");
+        var container = $("#pocemon-container");
         container.empty();
         actual += 12;
         getList(reqListener, actual, actual + 12);
     });
     document.getElementsByClassName("previous")[0].addEventListener("click", function(event) {
-        var container = $(".pocemon-container");
+        var container = $("#pocemon-container");
         container.empty();
         actual -= 12;
         getList(reqListener, actual, actual + 12);

@@ -8,7 +8,7 @@ body {
     position: fixed;
     top: 150px;
     height: 50px;
-    width: 80px;
+    width: 50px;
     right: 0px;
     background-repeat: no-repeat;
     background-size: 50px;
@@ -25,7 +25,7 @@ body {
     background-size: 50px;
     z-index: 100;
 }
-.pocemon-container {
+#pocemon-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -44,6 +44,7 @@ body {
 
 #one-pocemon > div {
     height: 100%;
+    border-radius: 10px 50px 10px 50px;
 }
 
 .kisdogok {
@@ -59,7 +60,7 @@ span {
     text-transform:capitalize;
 }
 
-.pocemon-container:empty, #one-pocemon:empty {
+#pocemon-container:empty, #one-pocemon:empty {
     background-image: url("../images/giphy.gif");
 }
 
@@ -70,6 +71,7 @@ span {
     text-align: center;   
     margin: 20px auto 20px auto;
     border-radius: 10px 50px 10px 50px;
+    text-transform:capitalize;
 }
 
 
@@ -138,7 +140,10 @@ span {
 
 #search {
     background-color: lightblue;
-    color: darkblue;
+}
+.form-control::-webkit-input-placeholder {
+    color: lightskyblue;
+    font-size: 20px;
 }
 
 .navbar-light .navbar-nav .nav-link {
